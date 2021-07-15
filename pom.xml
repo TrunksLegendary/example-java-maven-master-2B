@@ -11,6 +11,9 @@
   <properties>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+	<project.java.version>1.8</project.java.version>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
 
   <dependencies>
@@ -85,7 +88,7 @@
   </dependencies>
   
 	<build>
-		<finalName>example-java-maven</finalName>
+		<finalName>example-java-maven-2B</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -105,8 +108,12 @@
 				<configuration>
 					<debug>true</debug>
 					<debuglevel>lines,vars,source</debuglevel>
+					<source>${project.java.version}</source>
+                    <target>${project.java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 </project>
